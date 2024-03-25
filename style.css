@@ -1,3 +1,9 @@
 aside img {
     max-width: 1.2rem;
 }
+
+body {
+    background-color: #020617;
+    color: #f8fafc;
+    font-family: "Open Sans", system-ui, Arial, sans-serif;
+}
