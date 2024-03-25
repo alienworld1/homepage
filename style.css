@@ -137,3 +137,42 @@ footer {
     background-color: #020617;
     padding: 32px;
 }
+
+@media (width >= 726px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "figure about-me"
+            "links links";
+    }
+
+    header > figure {
+        grid-area: figure;
+        max-width: unset;
+        margin: 0;
+        justify-self: end;
+    }
+
+    header > figure > img {
+        max-width: unset;
+    }
+
+    header > article {
+        grid-area: about-me;
+        max-width: 509px;
+    }
+
+    header > nav {
+        grid-area: links;
+    }
+
+    .project-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1450px;
+        margin: 0 auto;
+        gap: 64px;
+    }
+}
