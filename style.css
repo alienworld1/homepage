@@ -1,9 +1,127 @@
-aside img {
-    max-width: 1.2rem;
+h1,
+figcaption {
+    font-family: "Playfair Display", serif;
+}
+
+:root {
+    --text-color: #f8fafc;
 }
 
 body {
-    background-color: #020617;
-    color: #f8fafc;
+    background-color: #0f172a;
+    color: var(--text-color);
     font-family: "Open Sans", system-ui, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+header {
+    background-color: #020617;
+    padding: 32px;
+    margin: 0;
+    flex: 1;
+}
+
+header > figure {
+    position: relative;
+    max-width: 300px;
+    margin: 16px auto;
+}
+
+header > figure > figcaption{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-size: 3rem;
+}
+
+header > figure > img {
+    max-width: 300px;
+}
+
+header > article {
+    margin: 0 12px;
+}
+
+header > article > h1 {
+    font-size: 2.2rem;
+}
+
+header > nav > ul {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    font-size: 2rem;
+    list-style-type: none;
+}
+
+ul a,
+aside a {
+    color: var(--text-color);
+    text-decoration: none; 
+}
+
+.project > aside > a > img {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(1%) saturate(3714%) hue-rotate(199deg) brightness(115%) contrast(97%);
+}
+
+main > h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    flex: 1;
+}
+
+.project {
+    max-width: 320px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 3rem;
+    grid-template-areas:
+        "img img"
+        "name links"
+        "description description";
+    background-color: #1e293b;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.project > img {
+    width: 320px;
+    object-fit: fill;
+    grid-area: img;
+}
+
+.project > h2 {
+    grid-area: name;
+    font-family: "Playfair Display", serif;
+    margin: 0;
+}
+
+.project > aside {
+    grid-area: links;
+}
+
+.project > h2,
+.project > aside {
+    margin: 12px 0;
+    font-size: 1.5rem;
+}
+
+.project > aside > a + a > img {
+    height: 1.5rem;
+}
+
+.project > .description {
+    grid-area: description;
 }
