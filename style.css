@@ -21,7 +21,7 @@ body {
 
 header {
     background-color: #020617;
-    padding: 32px;
+    padding: 20px;
     margin: 0;
     flex: 1;
 }
@@ -45,10 +45,13 @@ header > figure > img {
 
 header > article {
     margin: 0 12px;
+    background-color: #1e293b;
+    padding: 12px;
 }
 
 header > article > h1 {
     font-size: 2.2rem;
+    margin: 0;
 }
 
 header > nav > ul,
@@ -88,9 +91,9 @@ main > h1 {
         "name links"
         "description description";
     background-color: #1e293b;
-    padding: 12px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    padding: 12px;
 }
 
 .project-container {
